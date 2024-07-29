@@ -8,11 +8,17 @@ export const Container = styled.div`
   align-items: center;
   background: white;
 
- 
+  .comments-container {
+    max-height: 300px; /* Defina a altura máxima desejada */
+    overflow-y: auto; /* Adiciona rolagem vertical */
+    border: 1px solid #ddd; /* Opcional: para visualizar os limites do contêiner */
+    padding: 10px;
+    margin-top: 20px;
+  }
 
   > div {
     display: flex;
-    height: 95vh;
+    height: auto;
     width: 35.5rem;
     color: white;
     background: #79717a;
@@ -22,7 +28,7 @@ export const Container = styled.div`
 
     > form {
       margin: 0 auto;
-      margin-top: 1.5rem;
+      margin-top: 5.5rem;
       cursor:pointer;
      >hr{
       margin-top:35px;

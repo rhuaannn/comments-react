@@ -59,15 +59,15 @@ export function Input() {
             />
           </section>
           <Button onClick={handleSubmit}>Enviar comentário</Button>
-
-          <div>
+          <div className="comments-container">
             {comentPublic.length > 0 ? (
               comentPublic.map((comentPubli) => (
                 <div key={comentPubli.id}>
                   <h5>
                     Data atual: {now.format("DD/MM/YYYY")} 
                     <br />
-                    Hora Atual:{now.format("HH:mm:ss")}</h5>
+                    Hora Atual: {now.format("HH:mm:ss")}
+                  </h5>
                   <br />
                   <h2>{comentPubli.email}</h2>
                   <br />
@@ -75,7 +75,7 @@ export function Input() {
                   <button onClick={() => removeComments(comentPubli.id)}>Remover</button>
                   <br />
                   <hr />
-                  <br />
+                  
                 </div>
               ))
             ) : (
