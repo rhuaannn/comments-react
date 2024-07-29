@@ -28,7 +28,7 @@ export function Input() {
     });
   };
 
-  function preventForm(e) {
+  function handleSubmit(e) {
     e.preventDefault();
     addComments();
   }
@@ -58,7 +58,7 @@ export function Input() {
               onChange={(e) => setComents(e.target.value)}
             />
           </section>
-          <Button onClick={preventForm}>Enviar comentário</Button>
+          <Button onClick={handleSubmit}>Enviar comentário</Button>
 
           <div>
             {comentPublic.length > 0 ? (
